@@ -1,0 +1,22 @@
+{
+  "name": "graphqlexercise",
+  "version": "1.0.0",
+  "description": "GraphQL API for a restaurant menu application",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "apollo-server-testing": "^2.25.3",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
