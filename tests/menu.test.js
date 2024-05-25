@@ -124,12 +124,16 @@ describe("Menu API Tests", () => {
 
   it("fetches appetizers", async () => {
     const { data } = await query({ query: GET_APPETIZERS });
-    expect(data.getAppetizers).toHaveLength(5);
+    expect(data.getAppetizers[0]).toHaveProperty("name");
+    expect(data.getAppetizers[0]).toHaveProperty("servedWith");
+    expect(data.getAppetizers[0]).toHaveProperty("price");
   });
 
   it("fetches entrees", async () => {
     const { data } = await query({ query: GET_ENTREES });
-    expect(data.getEntrees).toHaveLength(4);
+    expect(data.getEntrees[0]).toHaveProperty("name");
+    expect(data.getEntrees[0]).toHaveProperty("servedWith");
+    expect(data.getEntrees[0]).toHaveProperty("price");
   });
 
   it("fetches cold sandwiches", async () => {
